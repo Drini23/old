@@ -1,0 +1,19 @@
+{% extends 'albania/navbar.html' %}
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'citi_detail.css' %}">
+    <dl>
+        {% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'citi_detail.css' %}">
+    <dl>
+        <h1 style="background-color:DodgerBlue;">Name</h1>
+        <dd >{{ attraction.name }}</dd>
+        <dt>Description</dt>
+        <dd>{{ attraction.description }}</dd>
+        <dt>City</dt>
+        <dd>{{ attraction.city }}</dd>
+
+    </dl>
+{% endblock  %}

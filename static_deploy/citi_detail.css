@@ -1,0 +1,55 @@
+/* Add this CSS to your project's stylesheet (e.g., albania.css) */
+
+/* Body and Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin:0;
+            padding:0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #family;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* List Style */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+/* City Image Style */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Footer Style */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

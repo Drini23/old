@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Site Name{% endblock %}</title>
+    <style type="text/css">
+        /* Sidebar Styles */
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Main Content Styles */
+        .main {
+            margin-left: 160px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Sidebar -->
+    <div class="sidenav">
+        <a href="{% url 'index' %}">Welcome</a>
+        <a href="{% url 'albania'%}">Home</a>
+        <a href="{% url 'city' %}"> City</a>
+        <a href="{% url 'attraction' %}"> Attractions</a>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login  </a> 
+        {% endif %}
+
+
+        <!-- Add more navigation links as needed -->
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        {% block content %}{% endblock %}
+
+         <hr>
+        {% if request.user.is_authenticated %}
+        <p>Hello {{request.user}}</p>
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login  </a> for more
+
+        {% endif %}
+        <hr>
+
+    </div>
+</body>
+</html>
+
